@@ -1,2 +1,21 @@
-#CPSC 374 1/31/2017
+#CPSC 374, 1/31/2017
 
+ADTs - Abstract Data Types
+  * a way of looking at data structures focusing on what it does and ignoring how it does he job
+  * "a class considered wihtout regard to its implementation"
+ 
+ Arrays
+  * contiguous blocks of memory for homogeneous array (all elements are the same type)
+  * Multidimensional
+    - row-major or column-major order
+    - array of arrays
+  * As a data structure we usually want no empty cells (v. sparse arrays)
+  * Algorithms
+    - Insert
+      + constant time
+    - Search/Find
+      + linear time
+    - Delete
+      + linear time 
+    - Duplicates?
+      + not much changes
