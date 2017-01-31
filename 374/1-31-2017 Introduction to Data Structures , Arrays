@@ -19,3 +19,12 @@ ADTs - Abstract Data Types
       + linear time 
     - Duplicates?
       + not much changes
+      
+  * Ordered Array
+    - sores values in key sequence
+    insert - find loc and move all others up
+    delete - find loc and move all others down
+    - insert is more expensive
+    - delete is easier
+    search - linear, as before, or...
+     Binary Search - very powerful
