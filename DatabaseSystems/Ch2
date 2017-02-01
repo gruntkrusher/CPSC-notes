@@ -3,9 +3,36 @@
 Characteristics of relation
 - Rows contain data about single entity
 - Columns contain data about attributes of the entity
-- Cellsof the table hold a single value
+- Cells of the table hold a single value
 - All entries in a oclumn are of the smae kind
 - Each oclumn has a unique name
 - The order of the columns is unimportant
 - The order of the rows is unimportant
 - No two rows may be identical
+
+Presenting Relation Structures
+  RELATION_NAME( Column01, Column02, ... , LastColumn)
+  ex. EMPLOYEE(EmployeeNumber, FirstName, LastName, Department, Email, Phone)
+  
+  database schema - the design on which a database and it associated applications are built
+ 
+Terminology
+  -Synonyms
+    Table = File = Relation
+    Row = Record = Tuple
+    Column = Field = Attribute
+    
+Types of Keys
+  key - a key is one [or more] column[s] of a relation that is [are] used to identify a row
+  unique key - a unique value is used for each entry [EmployeeNumber]
+  non-unique key - key value may repeat between entries [LastName]
+  composite key - a key that contains two or more attributes [LastName, FirstName]
+      - may be unique if combination of keys does not appear more than once
+          ex. if Employee 27, John May, is the only John May in the database it is a unique key for Employee 27
+  candidate keys - keys that uniquely identify each row in a relation
+**primary key - a candidate key chosen to be the main key for the relation
+      - if you know the vlaue of the primary key, you will be able to uniquely identify a single row
+      - primary keys are underlined in relation structure diagrams
+  surrogate key - a unique, numeric value that is added to a relation to serve as the primary key
+      - have no meaning to the user and are usually hidden on forms, queries, and reports
+  
