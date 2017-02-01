@@ -1,0 +1,11 @@
+# Database Systems Ch2
+
+Characteristics of relation
+- Rows contain data about single entity
+- Columns contain data about attributes of the entity
+- Cellsof the table hold a single value
+- All entries in a oclumn are of the smae kind
+- Each oclumn has a unique name
+- The order of the columns is unimportant
+- The order of the rows is unimportant
+- No two rows may be identical
