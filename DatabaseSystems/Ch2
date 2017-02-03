@@ -45,3 +45,18 @@ Types of Keys
   foreign key - a primary key from one table placed into another table
       - Referential Integrity - every value of a foreign key must match a value of an existing primary key
   
+The Problem of Null Values
+  * A Null if ofen ambiguous. It could mean...
+    - The column value is not appropriate for the specific row
+    - the column value is not decided
+    - the column value is unknown
+    
+Functional Dependency
+  * A relationship between attributes in which one attribute (or group of attributes) determines the value
+    of another attribute in the same table
+  * Relation
+    - OBJECT (ObjectColor, Weight, Shape) [ObjectColor is underlined]
+    
+
+  
+  
