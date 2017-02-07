@@ -33,3 +33,60 @@ ADTs - Abstract Data Types
     - Best case: Sorted
     - Worst case: Reverse Sorted
     - Average case: Random
+
+  * Bubble Sort
+    - Comparisons: 1/2N^2-1/2N 
+    - Swaps: 1/4N^2 - 1/4N
+    - O(N^2)
+    
+  * Selection Sort
+  
+     int i , j, minIndx
+     for (i=0; i < nElems-1; i++):
+        minIndex = i
+        for(j = i+1; j < nElems; j++):
+           if (a[j] < a[minIndex]):
+             minIndx = j
+        swap(i, minIndx)
+     // Far fewer swaps than Bubble Sort
+     
+   * Insertion Sort
+      
+      int i, j
+      for( i=1; i < nElems; i++):
+         long temp = a[i]
+         j=i
+         while ( j>0 && a[j-1] >= temp):
+            a[j] = a[j-1]
+            j--
+         a[j] = temp
+    
+    In some languages, swaps(and copies) are "expensive" for typical records
+       - references and pointers can reduce "cost"
+       
+    Choosing a "case"
+       * Random data
+          - leads to average behavior
+          - in the real world, data tends not to be random
+          
+       * Best case
+          - Data is (almost) sorted already
+       
+       * Worst case
+          - Data is sorted in reverse order
+          
+Modified Bubble Sort
+   - Check each loop to see if a swap was performed
+      - if not, the data is sorted, break
+      
+Space & Stability
+   - All of these sorts work "in place"
+      * Consant space requirements
+   - All are "stable"
+      * Do not re-order data that have the same key
+
+   
+   
+   
+   
+        
