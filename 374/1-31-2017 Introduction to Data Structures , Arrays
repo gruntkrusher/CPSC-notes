@@ -28,3 +28,8 @@ ADTs - Abstract Data Types
     - delete is easier
     search - linear, as before, or...
      Binary Search - very powerful
+
+  * Often
+    - Best case: Sorted
+    - Worst case: Reverse Sorted
+    - Average case: Random
