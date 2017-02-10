@@ -90,20 +90,48 @@ Normalization Process - Boyce-Codd Normal Form
  T-shirt       Red, Blue    12.00   0.60
  Sweat Shirt  Blue, Black   25.00   1.25
  
- NF3 (3 tables)
+ NF1 (1 table)
  ----------------
- Items      |  Color Scheme | Price
- T-Shirt            1         12.00
- Polo               2         12.00
- Sweat Shirt        3         25.00
+ Items      |   Color    |  Price | Tax
+ T-shirt         Red        12.00   0.60
+ T-shirt         Blue       12.00   0.60
+ Polo            Red        12.00   0.60
+ Polo           Yellow      12.00   0.60
+ Sweat Shirt     Blue       25.00   1.25
+ Sweat Shirt    Black       25.00   1.25
+ -----------------------------------------
  
+ NF2 (2 tables)
+ ------------------------------
+ Item      |   Color   
+ T-shirt        Red
+ T-shirt        Blue
+ Polo           Red
+ Polo           Yellow
+ Sweat Shirt    Blue
+ Sweat Shirt    Black
  
-Color Scheme  | Color 1 | Color 2
-     1            Red       Blue
-     2            Red      Yellow
-     3            Blue      Black
+ Item      |  Price | Tax
+ T-Shirt       12.00   0.60
+ Polo          12.00   0.60
+ Sweat Shirt   25.00   1.25
+------------------------------
 
-Price | Tax
-12.00   0.60
-25.00   1.25
-  
+ NF3  (3 tables)
+-----------------------------
+ Item      |   Color   
+ T-shirt        Red
+ T-shirt        Blue
+ Polo           Red
+ Polo           Yellow
+ Sweat Shirt    Blue
+ Sweat Shirt    Black
+ 
+ Item      |  Price 
+ T-Shirt       12.00   
+ Polo          12.00   
+ Sweat Shirt   25.00   
+ 
+ Price | Tax
+ 12.00   0.60
+ 25.00   1.25
