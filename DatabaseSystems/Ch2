@@ -70,7 +70,7 @@ Second Normal Form (2NF)
       by an attribute or attributes that make up only part of the key
       - Sometimes fileds depend on only part of the primary key, and these fields belong in another table
 
-Normalization Process - BCNF
+Normalization Process - Boyce-Codd Normal Form
     * Identify all the candidate keys of the relation.
     * Identify all the functional dependencies in the relation.
     * Examine the determinants of the functional dependencies. If any determinant 
@@ -82,6 +82,28 @@ Normalization Process - BCNF
     * Repeat step 3 as many times as necessary until every determinant of every relation is
       a candidate key.
 
+ NF0  (1 table)
+ ----------------
+ Items      |   Color    |  Price | Tax
+ T-shirt       Red, Blue    12.00   0.60
+ Polo         Red, Yellow   12.00   0.60
+ T-shirt       Red, Blue    12.00   0.60
+ Sweat Shirt  Blue, Black   25.00   1.25
  
-  
+ NF3 (3 tables)
+ ----------------
+ Items      |  Color Scheme | Price
+ T-Shirt            1         12.00
+ Polo               2         12.00
+ Sweat Shirt        3         25.00
+ 
+ 
+Color Scheme  | Color 1 | Color 2
+     1            Red       Blue
+     2            Red      Yellow
+     3            Blue      Black
+
+Price | Tax
+12.00   0.60
+25.00   1.25
   
