@@ -138,38 +138,38 @@ Normalization Process - Boyce-Codd Normal Form
  
  
  
- BCNF Use Example:
+BCNF Use Example:
  
-  R (A,B,C,D)
-    A   -> B,C,D
-    B,C -> A,D
-    D   -> B
-    
-  Since D is not a candidate key, we move it to a new table
-    R1(A,D,C)   R2(D,B)
- 
- BCNF Example 2:
- 
- R(Sn, Ln, Fn, Dn, Dc)
- Sn -> Ln, Fn, Dn, Dc [All others]
- Dn -> Dc
- 
- R1(Sn,Ln, Fn, Dn)    R2(Dn, Dc)
- 
- [2 tables]
- 
- StudentNumber | LastName | FirstName | DormName
-      100          Smith      Terry     Stephens  
-      200         Johnson     Jeff      Alexander
-      300        Abernathy    Susan     Horan
-      400        Smith        Susan     Alexander
-      
-  DormName | DormCost
-  Stephens    3500
-  Alexander   3800
-  Horan       4000
+    R (A,B,C,D)
+      A   -> B,C,D
+      B,C -> A,D
+      D   -> B
 
-  BCNF Example 3:
+    Since D is not a candidate key, we move it to a new table
+      R1(A,D,C)   R2(D,B)
+ 
+BCNF Example 2:
+ 
+   R(Sn, Ln, Fn, Dn, Dc)
+   Sn -> Ln, Fn, Dn, Dc [All others]
+   Dn -> Dc
+
+   R1(Sn,Ln, Fn, Dn)    R2(Dn, Dc)
+
+   [2 tables]
+
+   StudentNumber | LastName | FirstName | DormName
+        100          Smith      Terry     Stephens  
+        200         Johnson     Jeff      Alexander
+        300        Abernathy    Susan     Horan
+        400        Smith        Susan     Alexander
+
+    DormName | DormCost
+    Stephens    3500
+    Alexander   3800
+    Horan       4000
+
+BCNF Example 3:
   
   R(En, Ln, D, Em, Dp)
   En -> Ln, D, E, Dp [Candidate Key]
@@ -178,5 +178,32 @@ Normalization Process - Boyce-Codd Normal Form
   
   R1(En, Ln,D,Em)
   R2(D, Dp)
+  
+BCNF Example 4:
+
+  R(A, Cn, Ca, Md, D)
+  Cn -> Ca
+  A, Cn, Md -> Ca, D [Candidate Key]
+  A, Ca, Md -> Cn, D [Candidate Key]
+  
+  R1(A, Cn, Md, D)
+  R2(Cn, Ca)
+
+BCNF Example 5:
+  
+  R(Cn, S, T, G, Sn, Sa, P, D, Pe)
+  Sn -> Sa
+  P -> D, Pe
+  Cn, S, T -> P, D, Pe
+  Cn, S, T, Sn -> Sa, P, d, Pe, G [Candidate Key]
+  
+  R1(Cn, S, T, Sn, G, P)      R2(Sn, Sa)      R3( P, D, Pe)
+  Cn, S, T, Sn -> G, P [CK]   Sn -> Sa [CK]   P -> D, Pe [CK]
+  Cn, S, T -> P
+  
+  
+  
+  
+  
   
   
