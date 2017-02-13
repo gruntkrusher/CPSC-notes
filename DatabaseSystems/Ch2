@@ -135,3 +135,48 @@ Normalization Process - Boyce-Codd Normal Form
  Price | Tax
  12.00   0.60
  25.00   1.25
+ 
+ 
+ 
+ BCNF Use Example:
+ 
+  R (A,B,C,D)
+    A   -> B,C,D
+    B,C -> A,D
+    D   -> B
+    
+  Since D is not a candidate key, we move it to a new table
+    R1(A,D,C)   R2(D,B)
+ 
+ BCNF Example 2:
+ 
+ R(Sn, Ln, Fn, Dn, Dc)
+ Sn -> Ln, Fn, Dn, Dc [All others]
+ Dn -> Dc
+ 
+ R1(Sn,Ln, Fn, Dn)    R2(Dn, Dc)
+ 
+ [2 tables]
+ 
+ StudentNumber | LastName | FirstName | DormName
+      100          Smith      Terry     Stephens  
+      200         Johnson     Jeff      Alexander
+      300        Abernathy    Susan     Horan
+      400        Smith        Susan     Alexander
+      
+  DormName | DormCost
+  Stephens    3500
+  Alexander   3800
+  Horan       4000
+
+  BCNF Example 3:
+  
+  R(En, Ln, D, Em, Dp)
+  En -> Ln, D, E, Dp [Candidate Key]
+  Em -> En, Ln, D, E, Dp [Candidate Key]
+  D -> Dp
+  
+  R1(En, Ln,D,Em)
+  R2(D, Dp)
+  
+  
