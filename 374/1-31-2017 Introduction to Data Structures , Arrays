@@ -86,7 +86,24 @@ Space & Stability
       * Do not re-order data that have the same key
 
    
-   
+ Implementation?
+ 
+ int max
+ int count
+ 
+ StackX(int size)
+   long[] A = new long[size]
+   max = size
+   count = 0
+ 
+ void push(long j)
+   A[count] = j
+   count++
+ 
+ long pop()
+   long ans = A[count]
+   count--
+   return ans
    
    
         
