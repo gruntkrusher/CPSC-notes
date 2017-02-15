@@ -69,7 +69,16 @@ Second Normal Form (2NF)
   * This means that if the primary key is a composite key, no non-key attribute can be determined
       by an attribute or attributes that make up only part of the key
       - Sometimes fileds depend on only part of the primary key, and these fields belong in another table
-
+Third Normal Form (3NF)
+  * 2NF
+  * No Transitive Dependency
+Fourth Normal Form(4NF)
+  * At least 3 fields
+  * First value is related to all other values
+  * Other values are independent of each other
+  Multivalue Dependency - One value is the determinate for more than one mutually independent fields
+    - Solved by separating into a table for each of the independent fields
+        i.e., R(SSN, CollegeName, Hobby) -> R1(SSn, CollegeName)  R2(SSN, Hobby)
 Normalization Process - Boyce-Codd Normal Form
     * Identify all the candidate keys of the relation.
     * Identify all the functional dependencies in the relation.
@@ -192,14 +201,13 @@ BCNF Example 4:
 BCNF Example 5:
   
   R(Cn, S, T, G, Sn, Sa, P, D, Pe)
-  Sn -> Sa
-  P -> D, Pe
-  Cn, S, T -> P, D, Pe
-  Cn, S, T, Sn -> Sa, P, d, Pe, G [Candidate Key]
+  Sn             ->   Sa
+  P              ->   D, Pe
+  Cn, S, T       ->   P, D, Pe
+  Cn, T, Sn      ->   Sa, S, P, D, Pe, G [Candidate Key]
   
-  R1(Cn, S, T, Sn, G, P)      R2(Sn, Sa)      R3( P, D, Pe)
-  Cn, S, T, Sn -> G, P [CK]   Sn -> Sa [CK]   P -> D, Pe [CK]
-  Cn, S, T -> P
+  R1(Cn, T, Sn, G)      R2(Sn, Sa)      R3( P, D, Pe)     R4(Cn, S, T, P)
+  Cn, T, Sn -> G [CK]   Sn -> Sa [CK]   P -> D, Pe [CK]   Cn, S, T -> P [CK]
   
   
   
