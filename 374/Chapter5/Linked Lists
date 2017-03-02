@@ -10,4 +10,78 @@ As objects
   each object has some data and pointer/reference to the next object in the list
     deleting an item becomes easy - assign the deleted object's next to the object before it
       The deleted object will have no references to it and will be garbage collected
+    inserting an item is also easy
+      the inserted object will take on next of the item behind it and the item behind it will point to it
+      
+
+The Link Class
+
+    class Link {
+        public Record rec;  // data
+        public Link next;   // reference
+        public Link(Record r) { rec = r; }
+    }
     
+Special Cases
+    Dealing with empty list
+       Insert into empty list, or delete last node
+    Insert or delete at beginning of list
+    Insert or delete a end of list
+    
+Working in the Middle
+    Deleting
+        prev.next = current.next
+    Inserting
+        ** tmp is new link **
+        tmp.next = current
+        prev.next = tmp
+        
+        
+Class SortedList {
+    private Link first;
+    
+    public SortedList() }
+        first = null; 
+    }
+    
+    public boolean isEmpth() {
+        return (first == null);
+    }
+    
+    public void display() {
+        Link current = first;
+        while(current != null) {
+            current.displayLink();
+            current = current.next;
+        }
+    }
+    
+    public Link removeFirst() {
+        Link temp = first;
+        if(first != NULL)       // empty list case
+            first = first.next;
+        temp.next = NULL;       // data protections
+        return temp
+    }
+    
+    public void insertFirst(DT dat) {
+        Link newLink = new Link(dat);
+        newLink.next = first;
+        first = newLink;
+    }
+    
+Class ListStack {
+
+    private SortedList L;
+    
+    public void push(Dt dat) {
+        L.insertFirst(dat);
+    }
+    public DT pop() {
+        return L.removeFirst();
+    }
+    public voolean isEmpty() {
+        return L.isEmpty();
+    }
+        
+        
