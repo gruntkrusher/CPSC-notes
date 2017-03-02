@@ -1,0 +1,13 @@
+Linked lists can be made using a set of two arrays
+    one for tracking what index of the first comes next
+    [12,23,13]  Values
+    [2,-1,1] References
+    12 -> 13 -> 23 -> end
+  Flaw - requires your own memory management
+    can be accomplished with a stack of empty indices
+
+As objects
+  each object has some data and pointer/reference to the next object in the list
+    deleting an item becomes easy - assign the deleted object's next to the object before it
+      The deleted object will have no references to it and will be garbage collected
+    
