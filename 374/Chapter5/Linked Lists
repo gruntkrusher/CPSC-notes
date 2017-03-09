@@ -70,6 +70,28 @@ Class SortedList {
         first = newLink;
     }
     
+    public Link delete(Dt data) {
+        Link current = first;
+        Link previous = first;
+        
+        if(current == null)
+            throw EmptyListException();
+        
+        while(!current.equals(dat)) {
+            if(current.next == null)
+                return null;
+            else {
+                previous = current;
+                current = current.next;
+            }
+        }
+         
+        if(current == first)
+            first = first.next
+        else
+            previous.next = current.next;
+        return current
+    
 Class ListStack {
 
     private SortedList L;
@@ -83,5 +105,8 @@ Class ListStack {
     public voolean isEmpty() {
         return L.isEmpty();
     }
-        
+    
+3.9.2017
+
+    
         
