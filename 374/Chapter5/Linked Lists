@@ -74,6 +74,7 @@ Class SortedList {
         Link current = first;
         Link previous = first;
         
+        // special case empty list
         if(current == null)
             throw EmptyListException();
         
@@ -90,7 +91,33 @@ Class SortedList {
             first = first.next
         else
             previous.next = current.next;
+            
+        // recursion defined delete all others
+        while(delete(dat) != null);
+            
         return current
+        
+       
+    }
+    
+    public void insert (DT dat) {
+        Link newLink = new Link(dat);
+        Link previous = null;
+        Link current = first;
+        
+        while(current != null && dat > current.dat) {
+            previous = current;
+            current = current.next;
+        }
+        
+        if (previous == null)
+            first = newLink;
+        else
+            previous.next = newLink;
+        
+        newLink.next = current;
+    }
+    
     
 Class ListStack {
 
