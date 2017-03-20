@@ -52,3 +52,37 @@ Joins
   project (Same as Example 1)
   
 //-----------------------------------------------------------------------------//
+
+(4)
+
+  SELECT ProjectName, FirstName, LastName, HoursWorked
+  FROM EMPLOYEE AS E, PROJECT AS P, ASSIGNMENT AS A
+  WHERE E.EmployeeNumber = A.EmployeeNumber
+    AND P.ProjectID = A. ProjectID
+  ORDER BY P.ProjectId, A.EmployeeNumber;
+  
+  Show ProjectName, FirstName, Lastname, HoursWorked of all Employees that worked
+  on projects
+  
+//-----------------------------------------------------------------------------//
+
+  SELECT FirstName, LastName, HoursWorked
+  FROM EMPLOYEE, ASSIGNMENT
+  WHERE EMPLOYEE.EmployeeNumber = ASSIGNMENT.EmployeeNumber
+  ORDER BY EMPLOYEE.EmployeeNumber, ProjectID;
+  
+  SELECT FirstName, LastName, HoursWorked
+  FROM EMPLOYEE JOIN ASSIGNMENT
+    ON EMPLOYEE.EmployeeNumber = ASSIGNEMNT.EmployeeNumber
+  ORDER BY EMPLOYEE.EmployeeNumber, ProjectID;
+  
+  these two statements are equivalent
+
+//-----------------------------------------------------------------------------//
+
+
+
+
+
+
+
