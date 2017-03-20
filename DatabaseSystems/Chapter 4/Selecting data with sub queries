@@ -66,6 +66,8 @@ Joins
   
 //-----------------------------------------------------------------------------//
 
+  --INNER JOIN--
+
   SELECT FirstName, LastName, HoursWorked
   FROM EMPLOYEE, ASSIGNMENT
   WHERE EMPLOYEE.EmployeeNumber = ASSIGNMENT.EmployeeNumber
@@ -80,9 +82,24 @@ Joins
 
 //-----------------------------------------------------------------------------//
 
+  --OUTER JOIN--
+  
+  SELECT StudentPK, StudentName, LockerFK, LockerPK, LockerType
+  FROM STUDENT LEFT OUTER JOIN LOCKER
+    ON STUDENT.LockerFK = LOCKER.LockerOK
+  ORDER BY StudentPK;
 
+  Gives all information about students regardless if they have a locker or not
 
+  SELECT StudentPK, StudentName, LockerFK, LockerPK, LockerType
+  FROM STUDENT LEFT OUTER JOIN LOCKER
+    ON STUDENT.LockerFK = LOCKER.LockerOK
+  ORDER BY StudentPK;
+  
+  Gives all information about lockers regardless if they are assigned to students
+  or not
 
+//-----------------------------------------------------------------------------//
 
 
 
