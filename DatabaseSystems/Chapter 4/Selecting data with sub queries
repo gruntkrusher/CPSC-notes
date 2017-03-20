@@ -1,0 +1,28 @@
+Examples
+
+  SELECT FirstName, LastName
+  FROM EMPLOYEE
+  WHERE EmployeeNumber IN
+    (SELECT DISTINCT EmployeeNumber
+     FROM ASSIGNMENT
+     WHERE HoursWorked >  50);
+  
+  Outputs all names of employees that have worked more than 50 hours on any
+  project
+
+//-----------------------------------------------------------------------------//
+   
+  SELECT FirstName, LastName
+  FROM EMPLOYEE
+  WHERE EmployeeNumber IN 
+    (SELECT DISTINCT EmployeeNumber
+     FROM ASSIGNMENT
+     WHERE HoursWorked > 40 AND ProjectID IN
+        (SELECT DISTINCT ProjectID
+         FROM PROJECT
+         WHERE Department = 'Accounting'));
+         
+  Outputs Names of employees who have worked more than 40 hours on an assignment
+  sponsored by the accounting department.
+  
+//------------------------------------------------------------------------------//
