@@ -1,5 +1,7 @@
 Examples
 
+(1)
+
   SELECT FirstName, LastName
   FROM EMPLOYEE
   WHERE EmployeeNumber IN
@@ -11,7 +13,9 @@ Examples
   project
 
 //-----------------------------------------------------------------------------//
-   
+
+(2)
+
   SELECT FirstName, LastName
   FROM EMPLOYEE
   WHERE EmployeeNumber IN 
@@ -26,3 +30,25 @@ Examples
   sponsored by the accounting department.
   
 //------------------------------------------------------------------------------//
+
+Joins
+  - Another way to combining data is by using a join
+      * Join [also called an Inner Join]
+      * Left Outer Join
+      * Right Outer Join
+      * The basic idea of a Join is to form a new relation by connecting the 
+        contents of two or more other relations      
+
+//-----------------------------------------------------------------------------//
+
+(3)
+
+  SELECT FirstName, LastName, HoursWorked
+  FROM EMPLOYEE AS E, ASSIGNMENT AS A
+  WHERE E.EmployeeNumber = A.EmployeeNumber 
+    AND HoursWorked > 50;
+
+  Outputs all names of employees that have worked more than 50 hours on any
+  project (Same as Example 1)
+  
+//-----------------------------------------------------------------------------//
