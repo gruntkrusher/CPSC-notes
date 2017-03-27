@@ -1,0 +1,45 @@
+Designing Information Systems
+
+5 components - Hardware, Software, Data, Procedures, People
+  
+Business Process - a set of activities that transforms inputs into outputs
+  - withdrawl money from an ATM
+  - opening a bank account with an employee
+
+Business Process Modeling - The study and documentation of business processes
+  
+  **System Definition - The system definition step isa process that starts with 
+    the need for an information system to support a business process as its input,
+    and produces a project plan as its output.
+    
+    During this process, we need to:
+      Define goals and scope
+      Assess project feasibility (Technical, Economic, Organizational)
+      Form the project team
+      Plan the project
+  
+  **Requirements Analysis Step - The requirements analysis step is a process that
+    starts with the project plan as its input, and produces a set of approved user
+    requirements as its output.
+    
+    During this step we need to:
+      Conduct user interviews
+      Evaluate existing systems
+      Determine needed new forms/reports/queries
+      Identify needed new application features and functions 
+      consider security
+      Create the data model
+      Consider the five componenets of an information system
+        hardware, software, data, procedures, and people
+    
+    Delivers:
+      Data models
+      User requirements document
+      Statement of Work
+    
+  **Component Design Step - The component design step is a process that starts with the approved user requirements as its input, and produces a final system design as its output
+  
+    During this step we need to:
+      Determine hardware specifications
+      Determine program specifications
+      
