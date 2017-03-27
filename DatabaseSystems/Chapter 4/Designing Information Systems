@@ -37,7 +37,9 @@ Business Process Modeling - The study and documentation of business processes
       User requirements document
       Statement of Work
     
-  **Component Design Step - The component design step is a process that starts with the approved user requirements as its input, and produces a final system design as its output
+  **Component Design Step - The component design step is a process that starts with 
+    the approved user requirements as its input, and produces a final system design 
+    as its output
   
     During this step we need to:
       Determine hardware specifications
