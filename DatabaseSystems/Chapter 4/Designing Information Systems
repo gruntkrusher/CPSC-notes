@@ -45,3 +45,21 @@ Business Process Modeling - The study and documentation of business processes
       Determine hardware specifications
       Determine program specifications
       
+Business Rules - Rules the system must follow
+    * Each department may only have one department chair
+  
+  
+E-R Model
+
+ - Entities -
+    An entity is something that the users want to track
+    An entity class is a description of the structure and format of he occurances of the entity
+    An entity instance is a specific occurrence of an entity within an entity class
+    
+- Attributes -
+    
+
+  Identifiers
+  Relationships
+  
+    
