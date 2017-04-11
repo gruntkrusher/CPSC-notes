@@ -1,0 +1,16 @@
+P
+PP
+OPO
+PPPP
+PPPPP
+PPPPPP
+O
+OP
+OOP
+PPPP
+PPPPP
+PPPPPP
+
+Moves:
+SRC: (0,0) DEST: (2,0)
+SRC: (2,0) DEST: (2,2)

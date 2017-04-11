@@ -1,0 +1,14 @@
+P
+PP
+OPP
+POPP
+OOOOO
+OOOOOO
+O
+PP
+OOO
+OOOP
+OOOOO
+POOOOO
+
+No solution exists.

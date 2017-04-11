@@ -1,0 +1,14 @@
+O
+PP
+PPP
+PPPP
+PPPPP
+PPPPPP
+P
+PP
+PPP
+PPPP
+PPPPP
+OPPPPP
+
+No solution exits.
